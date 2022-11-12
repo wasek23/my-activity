@@ -1,0 +1,56 @@
+[
+	{
+		"id": "walking1",
+		"img": "./img/walking.jpg",
+		"name": "Walking",
+		"age": "05-70",
+		"time": 30,
+		"timeUnit": "M",
+		"description": "Walking is a great way to improve or maintain your overall health. Just 30 minutes every day can increase cardiovascular fitness."
+	},
+	{
+		"id": "jogging1",
+		"img": "./img/jogging.jpg",
+		"name": "Jogging",
+		"age": "10-60",
+		"time": 15,
+		"timeUnit": "M",
+		"description": "Jogging is effective in increasing human lifespan, and decreasing the effects of aging, with benefits for the cardiovascular system. Jogging is useful for fighting obesity and staying healthy."
+	},
+	{
+		"id": "running1",
+		"img": "./img/running.jpg",
+		"name": "Running",
+		"age": "15-50",
+		"time": 10,
+		"timeUnit": "M",
+		"description": "For potential weight loss, improved cardiovascular and respiratory health, improved cardiovascular fitness, reduced total blood cholesterol, strengthening of bones, possible strengthening of the immune system and an improved self-esteem and emotional state."
+	},
+	{
+		"id": "cycling1",
+		"img": "./img/cycling.jpg",
+		"name": "Cycling",
+		"age": "10-45",
+		"time": 20,
+		"timeUnit": "M",
+		"description": "Cycling reduces the risk of cancers, heart disease, and diabetes that are prevalent in sedentary lifestyles."
+	},
+	{
+		"id": "swimming1",
+		"img": "./img/swimming.jpg",
+		"name": "Swimming",
+		"age": "15-40",
+		"time": 15,
+		"timeUnit": "M",
+		"description": "Swimming builds endurance, muscle strength, and cardiovascular fitness."
+	},
+	{
+		"id": "jumping1",
+		"img": "./img/jumping.jpg",
+		"name": "Jumping",
+		"age": "20-35",
+		"time": 30,
+		"timeUnit": "M",
+		"description": "Jumping improved cardiovascular health, metabolism, bone density, strength, muscle tone, balance and coordination."
+	}
+]
