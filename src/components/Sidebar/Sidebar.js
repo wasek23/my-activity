@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
@@ -6,9 +6,17 @@ import './Sidebar.css';
 import logo from '../../img/Logo.svg';
 
 const Sidebar = ({ sidebar, sidebarActivities }) => {
-	const [breakTime, setBreakTime] = useState()
+	const [breakTime, setBreakTime] = useState();
+
+	useEffect(() => {
+		const localBreakTime = localStorage.getItem('breakTime');
+		if (localBreakTime) {
+			setBreakTime(parseInt(localBreakTime));
+		}
+	}, []);
 
 	const onBreakTime = (time) => {
+		localStorage.setItem('breakTime', time);
 		setBreakTime(time);
 	}
 
