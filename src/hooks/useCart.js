@@ -20,9 +20,9 @@ const useCart = () => {
 	useEffect(() => {
 		let cartItems = [];
 
-		activities?.map(product => {
+		activities?.map(activity => {
 			for (const c of cart) {
-				product.id === c.id && cartItems.push({ ...product, cartQuantity: c.quantity });
+				activity.id === c.id && cartItems.push({ ...activity, cartQuantity: c.quantity });
 			}
 
 			return null;

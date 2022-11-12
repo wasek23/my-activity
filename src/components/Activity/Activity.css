@@ -1,0 +1,28 @@
+.activity {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.activity figure {
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.activity .content {
+	margin-bottom: auto;
+}
+
+.activity .content>* {
+	margin-bottom: 10px;
+}
+
+.activity .content .age,
+.activity .content .time {
+	font-size: 18px;
+	font-weight: 500;
+}

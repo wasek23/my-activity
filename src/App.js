@@ -10,16 +10,18 @@ const App = () => {
 	const { cart, cartActivities, onAddToCart } = useCart();
 
 	return <main className='activityPage'>
-		<div className='mainArea'>
-			<h1>
-				<img src={logo} alt='My Activity' />
-				MY ACTIVITY
-			</h1>
+		<div className='mainAreaWrapper'>
+			<div className='mainArea'>
+				<h1>
+					<img src={logo} alt='My Activity' />
+					MY ACTIVITY
+				</h1>
 
-			<h4>Select today's exercise</h4>
+				<h2>Select today's exercise</h2>
 
-			<div className='activityContainer'>
-				<Activities activities={activities} onAddToCart={onAddToCart} />
+				<div className='activityContainer'>
+					<Activities activities={activities} onAddToCart={onAddToCart} />
+				</div>
 			</div>
 		</div>
 
