@@ -1,10 +1,16 @@
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowRight, faLocationDot, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 import './Sidebar.css';
 import logo from '../../img/Logo.svg';
 
 const Sidebar = ({ sidebar, sidebarActivities }) => {
+	const [breakTime, setBreakTime] = useState()
+
+	const onBreakTime = (time) => {
+		setBreakTime(time);
+	}
 
 	return <div className='sidebarArea'>
 		<div className='personDetails'>
@@ -34,11 +40,11 @@ const Sidebar = ({ sidebar, sidebarActivities }) => {
 		<h2>Add a break</h2>
 		<br />
 		<div className='card breakTime'>
-			<p>10s</p>
-			<p>20s</p>
-			<p>30s</p>
-			<p>40s</p>
-			<p>50s</p>
+			<p className={10 === breakTime ? 'active' : ''} onClick={() => onBreakTime(10)}>10s</p>
+			<p className={20 === breakTime ? 'active' : ''} onClick={() => onBreakTime(20)}>20s</p>
+			<p className={30 === breakTime ? 'active' : ''} onClick={() => onBreakTime(30)}>30s</p>
+			<p className={40 === breakTime ? 'active' : ''} onClick={() => onBreakTime(40)}>40s</p>
+			<p className={50 === breakTime ? 'active' : ''} onClick={() => onBreakTime(50)}>50s</p>
 		</div>
 
 		<h2>Exercise details</h2>
@@ -51,7 +57,7 @@ const Sidebar = ({ sidebar, sidebarActivities }) => {
 
 		<p className='card'>
 			<h2>Break time</h2>
-			<h2 className='textMuted'>{ }seconds</h2>
+			<h2 className='textMuted'>{breakTime} seconds</h2>
 		</p>
 
 		<button className='btn review body1'>Completed Activity</button>
