@@ -1,13 +1,13 @@
 import './App.css';
 import Activities from './components/Activities/Activities';
-import Cart from './components/Cart/Cart';
+import Sidebar from './components/Sidebar/Sidebar';
 import useActivities from './hooks/useActivities';
-import useCart from './hooks/useCart';
+import useSidebar from './hooks/useSidebar';
 import logo from './img/Logo.svg';
 
 const App = () => {
 	const { activities } = useActivities();
-	const { cart, cartActivities, onAddToCart } = useCart();
+	const { sidebar, sidebarActivities, onAddToSidebar } = useSidebar();
 
 	return <main className='activityPage'>
 		<div className='mainAreaWrapper'>
@@ -20,13 +20,13 @@ const App = () => {
 				<h2>Select today's exercise</h2>
 
 				<div className='activityContainer'>
-					<Activities activities={activities} onAddToCart={onAddToCart} />
+					<Activities activities={activities} onAddToSidebar={onAddToSidebar} />
 				</div>
 			</div>
 		</div>
 
-		<aside className='cartContainer'>
-			<Cart activities={activities} cart={cart} cartActivities={cartActivities} />
+		<aside className='sidebarContainer'>
+			<Sidebar activities={activities} sidebar={sidebar} sidebarActivities={sidebarActivities} />
 		</aside>
 	</main>
 }
