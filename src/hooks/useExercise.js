@@ -30,7 +30,7 @@ const useExercise = () => {
 		setExercisersActivities(exercisersItems);
 	}, [activities, exercisers]);
 
-	// On add to exercisers
+	// On add to list
 	const onAddToExercisers = (id) => {
 		const isInExercisers = exercisers.find(exercise => exercise.id === id);
 

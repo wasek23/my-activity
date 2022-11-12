@@ -20,7 +20,7 @@ const Sidebar = ({ exercisers, exercisersActivities }) => {
 		setBreakTime(time);
 	}
 
-	console.log(exercisersActivities);
+	const exerciseTimes = exercisersActivities.reduce((prev, current) => prev + (current.time * current.quantity), 0);
 
 	return <div className='sidebarArea'>
 		<div className='personDetails'>
@@ -62,7 +62,7 @@ const Sidebar = ({ exercisers, exercisersActivities }) => {
 
 		<p className='card'>
 			<h2>Exercise time</h2>
-			<h2 className='textMuted'>{ }minutes</h2>
+			<h2 className='textMuted'>{exerciseTimes} minutes</h2>
 		</p>
 
 		<p className='card'>
