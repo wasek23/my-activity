@@ -60,15 +60,15 @@ const Sidebar = ({ exercisers, exercisersActivities }) => {
 		<h2>Exercise details</h2>
 		<br />
 
-		<p className='card'>
+		<div className='card'>
 			<h2>Exercise time</h2>
 			<h2 className='textMuted'>{exerciseTimes} minutes</h2>
-		</p>
+		</div>
 
-		<p className='card'>
+		<div className='card'>
 			<h2>Break time</h2>
 			<h2 className='textMuted'>{breakTime} seconds</h2>
-		</p>
+		</div>
 
 		<button className='btn review body1'>Completed Activity</button>
 	</div>
