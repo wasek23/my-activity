@@ -1,6 +1,6 @@
 import './Activity.css';
 
-const Activity = ({ activity, onAddToSidebar }) => {
+const Activity = ({ activity, onAddToExercisers }) => {
 	const { id, img, name, age, time, description } = activity;
 
 	return <div className='activity'>
@@ -17,7 +17,7 @@ const Activity = ({ activity, onAddToSidebar }) => {
 			<p className='time'>Time Required: {time}M</p>
 		</div>
 
-		<button className='btn' onClick={() => onAddToSidebar(id)}>Add To List</button>
+		<button className='btn' onClick={() => onAddToExercisers(id)}>Add To List</button>
 	</div>
 }
 export default Activity;

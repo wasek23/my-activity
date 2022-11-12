@@ -5,7 +5,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import './Sidebar.css';
 import logo from '../../img/Logo.svg';
 
-const Sidebar = ({ sidebar, sidebarActivities }) => {
+const Sidebar = ({ exercisers, exercisersActivities }) => {
 	const [breakTime, setBreakTime] = useState();
 
 	useEffect(() => {
@@ -19,6 +19,8 @@ const Sidebar = ({ sidebar, sidebarActivities }) => {
 		localStorage.setItem('breakTime', time);
 		setBreakTime(time);
 	}
+
+	console.log(exercisersActivities);
 
 	return <div className='sidebarArea'>
 		<div className='personDetails'>
